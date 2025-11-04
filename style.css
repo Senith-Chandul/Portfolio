@@ -65,7 +65,7 @@ section {
     width: 100%;
 }
 
-/* Header & Navigation */
+/* Header & Navigation - Default (Mobile) */
 header {
     background-color: var(--primary-color);
     position: fixed;
@@ -141,6 +141,59 @@ nav {
     margin: 5px 0;
     background-color: var(--text-color);
     transition: var(--transition);
+}
+
+/* DESKTOP-ONLY TRANSPARENT NAVBAR STYLES */
+@media (min-width: 992px) {
+    header {
+        background-color: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.4s ease;
+    }
+
+    /* Scrolled State - Appears when user scrolls */
+    header.scrolled {
+        background-color: rgba(26, 26, 26, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+        border-bottom: 1px solid rgba(255, 123, 37, 0.15);
+    }
+
+    nav {
+        padding: 1.5rem 2rem;
+        transition: var(--transition);
+    }
+
+    /* Reduce padding when scrolled */
+    header.scrolled nav {
+        padding: 1rem 2rem;
+    }
+
+    .logo {
+        color: var(--white);
+        transition: var(--transition);
+    }
+
+    /* Logo becomes orange when scrolled */
+    header.scrolled .logo {
+        color: var(--accent-color);
+    }
+
+    .nav-links a {
+        color: var(--white);
+    }
+
+    /* Nav links become normal text color when scrolled */
+    header.scrolled .nav-links a {
+        color: var(--text-color);
+    }
+
+    /* Hero Section - Adjust padding for transparent nav */
+    .hero {
+        padding-top: 8rem; /* Extra padding to account for transparent nav */
+    }
 }
 
 /* Hero Section */
