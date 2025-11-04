@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">John Doe</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1 class="fade-in">John Doe</h1>
+            <p class="fade-in">Frontend Developer & UI/UX Designer</p>
+            <a href="#projects" class="btn fade-in">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="John Doe">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm John, a passionate frontend developer with over 5 years of experience creating beautiful and functional websites. I specialize in HTML5, CSS3, JavaScript, and modern frameworks like React and Vue.</p>
+                    <p>My approach combines technical expertise with an eye for design, ensuring that every project I work on is both visually appealing and user-friendly. I'm constantly learning and adapting to new technologies to stay at the forefront of web development.</p>
+                    <p>When I'm not coding, you can find me hiking, reading tech blogs, or experimenting with new design tools.</p>
+                    <a href="#contact" class="btn">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="E-commerce Website">
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Platform</h3>
+                        <p>A fully responsive e-commerce website with product filtering, cart functionality, and secure checkout.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Task Management App">
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>A productivity application for managing tasks, deadlines, and team collaboration with real-time updates.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">SCSS</span>
+                            <span class="tag">PWA</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Analytics Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>An interactive dashboard for visualizing data with customizable charts, graphs, and reporting features.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Blog Posts</h2>
+            </div>
+            <div class="blog-posts">
+                <article class="blog-post">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="CSS Grid vs Flexbox">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <time class="blog-date" datetime="2025-10-15">October 15, 2025</time>
+                            <span class="blog-category">Web Development</span>
+                        </div>
+                        <h3>CSS Grid vs Flexbox: When to Use Which</h3>
+                        <p>Understanding the differences between CSS Grid and Flexbox can significantly improve your layout skills. In this post, I break down when to use each layout method.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Progressive Web Apps">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <time class="blog-date" datetime="2025-10-01">October 1, 2025</time>
+                            <span class="blog-category">PWA</span>
+                        </div>
+                        <h3>Building Progressive Web Apps in 2025</h3>
+                        <p>Progressive Web Apps continue to evolve. Discover the latest techniques for creating fast, reliable, and engaging web experiences that work offline.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>London, UK</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>john.doe@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+44 123 456 7890</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="newsletter-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="newsletter" class="form-check-input">
+                            <label for="newsletter" class="form-check-label">Subscribe to my newsletter</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">John Doe</div>
+                <div class="social-links">
+                    <a href="https://twitter.com" class="social-link">
+                        <i class="fab fa-twitter rotate-icon"></i>
+                    </a>
+                    <a href="https://github.com" class="social-link">
+                        <i class="fab fa-github rotate-icon"></i>
+                    </a>
+                    <a href="https://linkedin.com" class="social-link">
+                        <i class="fab fa-linkedin-in rotate-icon"></i>
+                    </a>
+                    <a href="https://dribbble.com" class="social-link">
+                        <i class="fab fa-dribbble rotate-icon"></i>
+                    </a>
+                </div>
+                <p class="copyright">2025 John Doe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
