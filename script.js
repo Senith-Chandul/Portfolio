@@ -1,4 +1,4 @@
-// Desktop-only transparent navbar function
+// Function to handle transparent navbar for desktop view
 function desktopNavbarTransparency() {
     const header = document.querySelector('header');
     const heroSection = document.querySelector('.hero');
@@ -7,6 +7,7 @@ function desktopNavbarTransparency() {
         function handleScroll() {
             const heroHeight = heroSection.offsetHeight;
             
+            // Add or remove 'scrolled' class based on scroll position
             if (window.scrollY > heroHeight * 0.1) {
                 header.classList.add('scrolled');
             } else {
@@ -16,7 +17,7 @@ function desktopNavbarTransparency() {
         
         window.addEventListener('scroll', handleScroll);
         
-        // Check initial scroll position
+        // Check initial scroll position on page load
         handleScroll();
     }
 }
@@ -30,7 +31,7 @@ function handleDesktopView(e) {
     }
 }
 
-// Add listener for changes
+// Add listener for viewport size changes
 mediaQuery.addListener(handleDesktopView);
 
 // Check on initial load
@@ -41,6 +42,7 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 if (hamburger && navLinks) {
+    // Toggle mobile menu visibility
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
@@ -61,13 +63,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         
         const targetId = this.getAttribute('href');
-        if(targetId === '#') return;
+        if (targetId === '#') return;
         
         const targetElement = document.querySelector(targetId);
-        if(targetElement) {
+        if (targetElement) {
             const headerHeight = document.querySelector('header').offsetHeight;
             const targetPosition = targetElement.offsetTop - headerHeight;
             
+            // Scroll to the target element smoothly
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
@@ -76,11 +79,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission
+// Form submission handler
 document.getElementById('newsletter-form').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Thank you for your message! I will get back to you soon...');
-    this.reset();
+    this.reset(); // Reset the form fields
 });
 
 // Add fade-in animation to elements when they come into view
@@ -92,7 +95,7 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
+            entry.target.classList.add('fade-in'); // Add fade-in class when visible
         }
     });
 }, observerOptions);
@@ -105,7 +108,7 @@ document.querySelectorAll('.project-card, .blog-post, .about-content, .contact-c
 // Typing and erasing effect for hero-content paragraph
 document.addEventListener('DOMContentLoaded', () => {
     const heroText = document.querySelector('.hero-content p');
-    const text = "Specialize in Fullstack Development, Automation & Graphic Design..."; // The text to type
+    const text = "Specialize in Fullstack Development, Automation & Graphic Design..."; // Text to type
     let index = 0;
     let isTyping = true;
 
