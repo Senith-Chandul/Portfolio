@@ -45,7 +45,7 @@ a {
 
 /* Attribute selector */
 a[href^="http"]::after {
-    content: " ↗";
+
     font-size: 0.8em;
 }
 
@@ -198,11 +198,15 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #2a2a2a 100%);
-    color: var(--white);
-    text-align: center;
     position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
     overflow: hidden;
+    padding: 8rem 2rem; /* Adjusted padding for balanced spacing */
 }
 
 .hero::before {
@@ -216,66 +220,85 @@ nav {
     z-index: 1;
 }
 
+/* Background Video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: 0; /* Places the video behind the content */
+}
+
+/* Hero Content */
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 1; /* Places the content above the video */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0; /* Added padding for better spacing */
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+    font-size: 4.5rem; /* Increase the font size of the heading */
+    font-weight: 700; /* Make the heading bold */
     color: var(--white);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for better visibility */
+    transition: transform 0.2s ease, color 0.2s ease; /* Add hover transition */
 }
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
+.hero-content p {
+    font-size: 1.5rem; /* Increase the font size of the paragraph */
+    font-weight: 400; /* Slightly lighter weight for contrast */
     color: var(--text-light);
+    margin-bottom: 3rem; /* Space below the paragraph */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for better visibility */
+    transition: transform 0.2s ease, color 0.2s ease; /* Add hover transition */
 }
 
+/* General Button Styles */
 .btn {
     display: inline-block;
-    padding: 0.9rem 2rem;
+    padding: 1rem 2.5rem;
     background: linear-gradient(135deg, var(--button-primary) 0%, var(--accent-secondary) 100%);
     color: var(--white);
     border-radius: var(--border-radius);
     font-weight: 600;
-    transition: var(--transition);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     border: none;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(255, 123, 37, 0.3);
-    position: relative;
-    overflow: hidden;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: var(--transition);
-}
-
-.btn:hover::before {
-    left: 100%;
-}
-
+/* Hover Effect for All Buttons */
 .btn:hover {
-    background: linear-gradient(135deg, var(--button-hover) 0%, var(--accent-secondary) 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 123, 37, 0.4);
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 8px 20px rgba(255, 123, 37, 0.5); /* Enhance the shadow on hover */
 }
 
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(255, 123, 37, 0.3);
+/* Increased button size in hero section */
+.hero-content .btn {
+    padding: 1.5rem 3rem; /* Increase button size */
+    font-size: 1.3rem; /* Make the button text larger */
+    font-weight: 700; /* Make the text bold */
+    background: linear-gradient(135deg, var(--button-primary) 0%, var(--accent-secondary) 100%);
+    color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 15px rgba(255, 123, 37, 0.4); /* Add a stronger shadow for emphasis */
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+}
+
+.hero-content .btn:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0 8px 20px rgba(255, 123, 37, 0.6); /* Enhance the shadow on hover */
+    background: linear-gradient(135deg, var(--button-hover) 0%, var(--accent-secondary) 100%);
 }
 
 /* About Section */
@@ -331,6 +354,8 @@ nav {
 /* Projects Section */
 .projects {
     background-color: var(--primary-color);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .section-title {
@@ -420,6 +445,16 @@ nav {
     border: 1px solid rgba(255, 123, 37, 0.2);
 }
 
+.project-link {
+    text-align: center;
+}
+
+.project-content a {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+}
+
 /* Blog Section */
 .blog {
     background-color: var(--secondary-color);
@@ -437,11 +472,15 @@ nav {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    display: block; /* Ensure the <a> tag behaves like a block element */
+    text-decoration: none; /* Remove the default underline */
+    color: inherit; /* Inherit text color */
 }
 
+/* Make the entire blog post clickable */
 .blog-post:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Slightly lift the block on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
 
 .blog-image {
@@ -501,7 +540,15 @@ nav {
 .contact-item {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-item h3 {
+    margin-bottom: 0rem; /* Reduce the space below the h3 */
+}
+
+.contact-item p {
+    margin-top: 0; /* Remove any extra space above the p */
 }
 
 .contact-icon {
@@ -598,7 +645,7 @@ footer {
 .social-links {
     display: flex;
     gap: 1.5rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .social-link {
@@ -620,7 +667,7 @@ footer {
 }
 
 .copyright {
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: var(--text-light);
     font-size: 0.9rem;
 }
@@ -648,11 +695,29 @@ footer {
 
 /* Transforms */
 .rotate-icon {
-    transition: transform 0.5s ease;
+    transition: rotate-icon 0.5s ease;
 }
 
 .social-link:hover .rotate-icon {
-    transform: rotate(360deg);
+    animation: rotate-icon 0.5s ease;
+}
+
+@keyframes rotate-icon {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(40deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-40deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 /* Transitions */
@@ -800,5 +865,48 @@ input:not([type="submit"]):not([type="checkbox"]) {
 
     .about-text h2 {
         font-size: 2rem;
+    }
+}
+
+/* Typing effect */
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--accent-color);
+    height: 1.5em; /* Set a fixed height to prevent layout shifts */
+    line-height: 1.5em; /* Match the line height to the text */
+    vertical-align: top; /* Align the text properly */
+    animation: none; /* Remove any existing animation */
+}
+
+/* Ensure the paragraph doesn't collapse */
+.hero-content p {
+    min-height: 1.5em; /* Set a minimum height for the paragraph */
+    margin-bottom: 2.5rem; /* Add spacing between the paragraph and the button */
+}
+
+/* Typing and erasing animations */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-color: var(--accent-color);
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: var(--accent-color);
     }
 }

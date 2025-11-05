@@ -79,7 +79,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Form submission
 document.getElementById('newsletter-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
+    alert('Thank you for your message! I will get back to you soon...');
     this.reset();
 });
 
@@ -100,4 +100,35 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animation
 document.querySelectorAll('.project-card, .blog-post, .about-content, .contact-container').forEach(el => {
     observer.observe(el);
+});
+
+// Typing and erasing effect for hero-content paragraph
+document.addEventListener('DOMContentLoaded', () => {
+    const heroText = document.querySelector('.hero-content p');
+    const text = "Specialize in Fullstack Development, Automation & Graphic Design..."; // The text to type
+    let index = 0;
+    let isTyping = true;
+
+    function typeEffect() {
+        if (isTyping) {
+            heroText.textContent = text.slice(0, index);
+            index++;
+            if (index > text.length) {
+                isTyping = false;
+                setTimeout(typeEffect, 1000); // Pause before erasing
+                return;
+            }
+        } else {
+            heroText.textContent = text.slice(0, index);
+            index--;
+            if (index < 0) {
+                isTyping = true;
+                setTimeout(typeEffect, 500); // Pause before typing again
+                return;
+            }
+        }
+        setTimeout(typeEffect, 100); // Adjust typing/erasing speed here
+    }
+
+    typeEffect();
 });

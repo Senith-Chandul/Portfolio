@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta property="og:title" content="Senith Chandul - A Student, Designer and Developer">
+	<meta property="og:image" content="srcs/profile.webp" />
+	<meta property="og:description" content="Hi There, I'm Senith Chandul. Click here to take a look on my official website...">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Portfolio</title>
+    <title>Senith Chandul - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -12,7 +15,7 @@
     <!-- Header & Navigation -->
     <header>
         <nav>
-            <div class="logo">John Doe</div>
+            <div class="logo">Senith Chandul</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -30,9 +33,15 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Background Video -->
+        <video class="hero-video" autoplay muted loop>
+            <source src="srcs/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
         <div class="container hero-content">
-            <h1 class="fade-in">John Doe</h1>
-            <p class="fade-in">Frontend Developer & UI/UX Designer</p>
+            <h1 class="fade-in">Senith Chandul</h1>
+            <p class="fade-in">  </p>
             <a href="#projects" class="btn fade-in">View My Work</a>
         </div>
     </section>
@@ -42,13 +51,13 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="John Doe">
+                    <img src="srcs/profile.webp" alt="Senith Chandul">
                 </div>
                 <div class="about-text">
                     <h2>About Me</h2>
-                    <p>Hello! I'm John, a passionate frontend developer with over 5 years of experience creating beautiful and functional websites. I specialize in HTML5, CSS3, JavaScript, and modern frameworks like React and Vue.</p>
-                    <p>My approach combines technical expertise with an eye for design, ensuring that every project I work on is both visually appealing and user-friendly. I'm constantly learning and adapting to new technologies to stay at the forefront of web development.</p>
-                    <p>When I'm not coding, you can find me hiking, reading tech blogs, or experimenting with new design tools.</p>
+                    <p>Hello! I'm Senith Chandul, a Computer Science student at the University of Westminster with a deep passion for full-stack development, automation, and graphic design. I enjoy transforming ideas into practical, well-designed solutions that merge functionality with creativity.</p>
+                    <p>I specialize in HTML5, CSS3, JavaScript, Python, and Java, allowing me to build and automate both front-end and back-end systems efficiently. Alongside coding, I have a strong eye for design, using tools like Adobe Photoshop to craft clean, visually balanced layouts that enhance user experiences.</p>
+                    <p>When I'm not working on a project, you'll find me experimenting with new design concepts, refining automation scripts, or exploring creative ways to connect technology with everyday life.</p>
                     <a href="#contact" class="btn">Get In Touch</a>
                 </div>
             </div>
@@ -64,50 +73,52 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="E-commerce Website">
+                        <img src="srcs/project1.jpg" alt="Sri Lanka Telegramic">
                     </div>
                     <div class="project-content">
-                        <h3>E-commerce Platform</h3>
-                        <p>A fully responsive e-commerce website with product filtering, cart functionality, and secure checkout.</p>
+                        <h3>SLTG Bot</h3>
+                        <p>A Telegram bot that provides information about the Telegram Community in Sri Lanka.</p>
                         <div class="project-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">React</span>
-                        </div>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Task Management App">
-                    </div>
-                    <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A productivity application for managing tasks, deadlines, and team collaboration with real-time updates.</p>
-                        <div class="project-tags">
-                            <span class="tag">Vue.js</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Pyrogram</span>
                             <span class="tag">Firebase</span>
-                            <span class="tag">SCSS</span>
-                            <span class="tag">PWA</span>
                         </div>
-                        <a href="#" class="btn">View Project</a>
+                        <div class="project-link">
+                            <a href="#" class="btn">View Project</a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Analytics Dashboard">
+                        <img src="srcs/project2.jpg" alt="Send-IT">
                     </div>
                     <div class="project-content">
-                        <h3>Analytics Dashboard</h3>
-                        <p>An interactive dashboard for visualizing data with customizable charts, graphs, and reporting features.</p>
+                        <h3>Send-IT</h3>
+                        <p>A script that will let you message people through telegram bots.</p>
                         <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">D3.js</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Requests</span>
                         </div>
-                        <a href="#" class="btn">View Project</a>
+                        <div class="project-link">
+                            <a href="#" class="btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="srcs/project3.jpg" alt="Protect Our Oceans">
+                    </div>
+                    <div class="project-content">
+                        <h3>Protect Our Oceans</h3>
+                        <p>A campaign to raise awareness about ocean pollution and promote sustainable practices.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-link">
+                            <a href="#" class="btn">View Project</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,7 +132,7 @@
                 <h2>Latest Blog Posts</h2>
             </div>
             <div class="blog-posts">
-                <article class="blog-post">
+                <a href="#" class="blog-post">
                     <div class="blog-image">
                         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="CSS Grid vs Flexbox">
                     </div>
@@ -132,10 +143,9 @@
                         </div>
                         <h3>CSS Grid vs Flexbox: When to Use Which</h3>
                         <p>Understanding the differences between CSS Grid and Flexbox can significantly improve your layout skills. In this post, I break down when to use each layout method.</p>
-                        <a href="#" class="btn">Read More</a>
                     </div>
-                </article>
-                <article class="blog-post">
+                </a>
+                <a href="#" class="blog-post">
                     <div class="blog-image">
                         <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Progressive Web Apps">
                     </div>
@@ -146,9 +156,8 @@
                         </div>
                         <h3>Building Progressive Web Apps in 2025</h3>
                         <p>Progressive Web Apps continue to evolve. Discover the latest techniques for creating fast, reliable, and engaging web experiences that work offline.</p>
-                        <a href="#" class="btn">Read More</a>
                     </div>
-                </article>
+                </a>
             </div>
         </div>
     </section>
@@ -167,7 +176,7 @@
                         </div>
                         <div>
                             <h3>Location</h3>
-                            <p>London, UK</p>
+                            <p>Akuressa, Sri Lanka</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -176,7 +185,7 @@
                         </div>
                         <div>
                             <h3>Email</h3>
-                            <p>john.doe@example.com</p>
+                            <p>senithchandul118@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -185,7 +194,7 @@
                         </div>
                         <div>
                             <h3>Phone</h3>
-                            <p>+44 123 456 7890</p>
+                            <p>+94 74 3500 237</p>
                         </div>
                     </div>
                 </div>
@@ -222,22 +231,22 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo">John Doe</div>
+                <div class="logo">Senith Chandul Sagarage</div>
                 <div class="social-links">
-                    <a href="https://twitter.com" class="social-link">
-                        <i class="fab fa-twitter rotate-icon"></i>
+                    <a href="https://www.instagram.com/s_chandul" class="social-link" target="_blank">
+                        <i class="fab fa-instagram rotate-icon"></i>
                     </a>
-                    <a href="https://github.com" class="social-link">
+                    <a href="https://github.com/Senith-Chandul" class="social-link" target="_blank">
                         <i class="fab fa-github rotate-icon"></i>
                     </a>
-                    <a href="https://linkedin.com" class="social-link">
+                    <a href="https://www.linkedin.com/in/senithchandul/" class="social-link" target="_blank">
                         <i class="fab fa-linkedin-in rotate-icon"></i>
                     </a>
-                    <a href="https://dribbble.com" class="social-link">
-                        <i class="fab fa-dribbble rotate-icon"></i>
+                    <a href="https://wa.me/94743500237" class="social-link" target="_blank">
+                        <i class="fab fa-whatsapp rotate-icon"></i>
                     </a>
                 </div>
-                <p class="copyright">2025 John Doe. All rights reserved.</p>
+                <p class="copyright">2025 Senith Chandul. All rights reserved.</p>
             </div>
         </div>
     </footer>
